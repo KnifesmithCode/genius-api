@@ -131,6 +131,16 @@ var Api = (function () {
 
       return this.requestPromise(request);
     }
+  }, {
+    key: 'searchSync',
+    value: function searchSync(query) {
+      var request = {
+        url: 'search',
+        qs: { 'q': query }
+      };
+
+      return await this.requestPromise(request);
+    }
   }]);
 
   return Api;
