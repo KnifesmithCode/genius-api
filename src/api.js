@@ -115,6 +115,15 @@ class Api {
 
     return this.requestPromise(request);
   }
+
+  searchSync(query) {
+    let request = {
+      url: 'search',
+      qs: {'q': query}
+    }
+
+    return await this.requestPromise(request);
+  }
 }
 
 module.exports = Api;
